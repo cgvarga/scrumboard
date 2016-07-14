@@ -1,0 +1,82 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 65.5%;
+    font-family: sans-serif;
+    height: 100%;
+}
+
+body {
+    font-size: 1em;
+    box-sizing: border-box;
+    position: relative;
+    height: 100%;
+}
+
+body * {
+    box-sizing: inherit;
+}
+
+.application {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+}
+
+.scrumboard {
+    border: 1px solid red;
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+.bucket-container,
+.calendar-container {
+    display: table-cell;
+    border: 1px solid green;
+    height: 100%;
+    vertical-align: top;
+    position: relative;
+}
+
+.bucket-container {
+    width: 250px;
+}
+
+.bucket {
+    height: 100%;
+}
+
+.work-item {
+    border: 1px solid blue;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.calendar {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: table;
+}
+
+.week {
+    display: table-row;
+    height: 33.3%;
+}
+
+.day {
+    display: table-cell;
+    border: 1px solid purple;
+    width: calc(100%/7);
+}
+
+.highlight {
+    background-color: yellow;
+}
