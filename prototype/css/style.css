@@ -51,6 +51,7 @@ body * {
 
 .bucket {
     height: 100%;
+    overflow: auto;
 }
 
 .work-item {
@@ -59,11 +60,23 @@ body * {
     cursor: pointer;
 }
 
+.work-item * {
+    pointer-events: none;
+}
+
 .calendar {
     height: 100%;
     width: 100%;
     position: relative;
     display: table;
+}
+
+.calendar .secondary {
+    display: none;
+}
+
+.calendar .expanded .secondary {
+    display: block;
 }
 
 .week {
@@ -75,6 +88,13 @@ body * {
     display: table-cell;
     border: 1px solid purple;
     width: calc(100%/7);
+    vertical-align: top;
+}
+
+.day-content {
+    border: 1px solid green;
+    height: 100%;
+    overflow-y: auto;
 }
 
 .highlight {
